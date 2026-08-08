@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rafay - Freelance digital services including video editing, thumbnail design, AI content writing, Excel and website development.">
+<title>Rafay | Freelance Digital Services</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7faf9;color:#101828;line-height:1.6}
+a{text-decoration:none;color:inherit}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,17,24,.94);backdrop-filter:blur(10px);color:white;padding:16px 7%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:800;color:#24d88b}.logo span{color:white}
+.navlinks{display:flex;gap:24px;font-size:14px}
+.navlinks a:hover{color:#24d88b}
+.btn{display:inline-block;background:#20c879;color:#071118;padding:13px 22px;border-radius:10px;font-weight:800;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.hero{background:linear-gradient(135deg,#061118,#0c2022);color:white;padding:90px 7%;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.badge{display:inline-block;border:1px solid #20c879;color:#20c879;border-radius:30px;padding:7px 14px;font-size:13px;font-weight:700;margin-bottom:20px}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.05;margin-bottom:20px}
+.green{color:#20d98b}
+.hero p{font-size:18px;color:#cbd5db;max-width:650px;margin-bottom:28px}
+.hero-card{min-height:360px;border:1px solid #1e4a46;border-radius:28px;background:radial-gradient(circle at 50% 30%,#0b7359,#0b2027 60%);display:flex;align-items:center;justify-content:center;box-shadow:0 25px 80px #0007}
+.avatar{width:210px;height:210px;border-radius:50%;background:linear-gradient(145deg,#20d98b,#0b5f4b);display:flex;align-items:center;justify-content:center;font-size:72px;font-weight:900;color:white;border:7px solid #ffffff22}
+section{padding:80px 7%}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title small{color:#12a96b;font-weight:800;letter-spacing:2px}
+.section-title h2{font-size:38px;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.card{background:white;border:1px solid #e3ebe7;border-radius:18px;padding:25px;box-shadow:0 10px 30px #0a2b2010;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px #0a2b2020}
+.icon{font-size:34px;margin-bottom:15px}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{font-size:14px;color:#667085;margin-bottom:18px}
+.card .mini{color:#0c9d63;font-weight:800;font-size:13px}
+.stats{background:#071118;color:white;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;border-radius:22px;margin:0 7%;padding:35px}
+.stat strong{font-size:32px;color:#20d98b;display:block}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.about-box{background:linear-gradient(145deg,#071118,#12342f);border-radius:25px;min-height:310px;display:flex;align-items:center;justify-content:center;color:white}
+.about h2{font-size:42px;margin:8px 0 15px}
+.about p{color:#667085;margin-bottom:18px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:25px}
+.checks span{font-weight:700}.checks span:before{content:"✓";color:#10b981;margin-right:8px}
+.cta{text-align:center;background:#0a191f;color:white;border-radius:25px;padding:55px 20px}
+.cta p{color:#b9c6ca;margin:10px auto 25px}
+footer{background:#061118;color:#cbd5db;padding:55px 7% 25px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+footer h3,footer h4{color:white;margin-bottom:15px}
+footer a{display:block;margin:8px 0;font-size:14px}
+.copy{grid-column:1/-1;border-top:1px solid #ffffff15;padding-top:20px;font-size:13px;text-align:center}
+.chat-toggle{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;border:0;background:#20d98b;color:#061118;font-size:25px;font-weight:900;box-shadow:0 10px 30px #0004;z-index:100;cursor:pointer}
+.chatbox{position:fixed;right:22px;bottom:95px;width:340px;max-width:calc(100vw - 30px);background:white;border-radius:20px;box-shadow:0 20px 60px #0003;overflow:hidden;display:none;z-index:99}
+.chathead{background:#071118;color:white;padding:16px;font-weight:800;display:flex;justify-content:space-between}
+.chatmessages{height:300px;overflow:auto;padding:15px;background:#f6f8f7}
+.msg{padding:10px 12px;border-radius:14px;margin:8px 0;max-width:85%;font-size:14px}
+.bot{background:white}.user{background:#20d98b;margin-left:auto}
+.chatinput{display:flex;padding:10px;border-top:1px solid #ddd}
+.chatinput input{flex:1;border:0;outline:0;padding:10px}
+.chatinput button{border:0;background:#20d98b;border-radius:10px;padding:0 15px;font-weight:800}
+@media(max-width:950px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}footer{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.navlinks{display:none}.hero{padding:65px 6%}section{padding:60px 6%}.grid{grid-template-columns:1fr}.stats{margin:0 6%;grid-template-columns:1fr 1fr;padding:25px 10px}footer{grid-template-columns:1fr}.about h2{font-size:34px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">R<span>·</span>Rafay</div>
+  <div class="navlinks">
+    <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </div>
+  <a class="btn" href="https://www.fiverr.com/" target="_blank">Order on Fiverr ↗</a>
+</nav>
+
+<header class="hero" id="home">
+  <div>
+    <div class="badge">WELCOME TO MY DIGITAL SERVICES</div>
+    <h1>Hi, I'm <span class="green">Rafay</span></h1>
+    <p>I provide reliable online services designed to help creators, businesses and individuals build a stronger online presence.</p>
+    <a class="btn" href="#services">Explore My Services</a>
+  </div>
+  <div class="hero-card"><div class="avatar">R</div></div>
+</header>
+
+<section id="services">
+  <div class="section-title"><small>MY SERVICES</small><h2>What I Can Do For You</h2></div>
+  <div class="grid">
+    <div class="card"><div class="icon">🎬</div><h3>YouTube Shorts Editing</h3><p>Engaging short-form edits with captions, cuts, effects and clean pacing.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a></div>
+    <div class="card"><div class="icon">🖼️</div><h3>Thumbnail Design</h3><p>Modern thumbnails designed to make your videos look professional and clickable.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a></div>
+    <div class="card"><div class="icon">✍️</div><h3>AI Content Writing</h3><p>Readable, well-structured AI-assisted articles, scripts, descriptions and copy.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a></div>
+    <div class="card"><div class="icon">📊</div><h3>Excel & Google Sheets</h3><p>Data organization, formatting, formulas, cleanup and simple dashboards.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a></div>
+    <div class="card"><div class="icon">💻</div><h3>Website Development</h3><p>Clean, responsive landing pages and simple websites for online projects.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a></div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><strong>5+</strong><span>Services</span></div>
+  <div class="stat"><strong>24/7</strong><span>Online Support</span></div>
+  <div class="stat"><strong>100%</strong><span>Commitment</span></div>
+  <div class="stat"><strong>Fast</strong><span>Communication</span></div>
+</div>
+
+<section id="about">
+  <div class="about">
+    <div class="about-box"><div style="text-align:center"><div class="avatar" style="margin:auto;width:150px;height:150px;font-size:52px">R</div><h3 style="margin-top:18px">Rafay</h3><p style="color:#b9c6ca">Freelance Digital Services</p></div></div>
+    <div>
+      <small style="color:#12a96b;font-weight:800;letter-spacing:2px">ABOUT ME</small>
+      <h2>Your Reliable Online Service Partner</h2>
+      <p>I focus on delivering clean, useful and professional digital work. Whether you need a short video edited, a thumbnail designed, content prepared, data organized or a simple website built, I aim to make the process easy.</p>
+      <div class="checks"><span>Professional communication</span><span>Attention to detail</span><span>Client-focused work</span><span>Reliable delivery</span></div>
+      <a class="btn" href="#contact">Let's Work Together</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="cta">
+    <small class="green">HAVE A PROJECT?</small>
+    <h2>Let's Create Something Great</h2>
+    <p>Choose a service and send me your requirements on Fiverr.</p>
+    <a class="btn" href="https://www.fiverr.com/" target="_blank">Contact Me on Fiverr ↗</a>
+  </div>
+</section>
+
+<footer>
+  <div><h3 class="green">Rafay</h3><p>Helping creators and businesses with practical digital services.</p></div>
+  <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <div><h4>Services</h4><a href="#services">Video Editing</a><a href="#services">Thumbnails</a><a href="#services">AI Writing</a><a href="#services">Excel</a></div>
+  <div><h4>Support</h4><a href="#contact">Fiverr</a><a href="#services">FAQs</a><a href="#about">About Me</a></div>
+  <div class="copy">© 2026 Rafay. All rights reserved.</div>
+</footer>
+
+<button class="chat-toggle" onclick="toggleChat()">💬</button>
+<div class="chatbox" id="chatbox">
+  <div class="chathead"><span>Chat with Rafay 🤖</span><button onclick="toggleChat()" style="background:none;border:0;color:white;font-size:20px">×</button></div>
+  <div class="chatmessages" id="messages">
+    <div class="msg bot">Hi! 👋 I'm Rafay's website assistant. What service are you interested in?</div>
+  </div>
+  <div class="chatinput"><input id="chatinput" placeholder="Type your question..." onkeydown="if(event.key==='Enter')sendMsg()"><button onclick="sendMsg()">Send</button></div>
+</div>
+
+<script>
+function toggleChat(){const b=document.getElementById('chatbox');b.style.display=b.style.display==='block'?'none':'block'}
+function sendMsg(){
+ const input=document.getElementById('chatinput'), text=input.value.trim(); if(!text)return;
+ const box=document.getElementById('messages');
+ box.innerHTML += `<div class="msg user">${escapeHtml(text)}</div>`;
+ input.value='';
+ let t=text.toLowerCase(), reply;
+ if(t.includes('video')||t.includes('short')) reply="I offer YouTube Shorts editing with captions, cuts, effects and clean pacing. You can order through Fiverr.";
+ else if(t.includes('thumbnail')) reply="I offer professional YouTube thumbnail design. Tell me your channel/topic and requirements.";
+ else if(t.includes('writing')||t.includes('content')||t.includes('ai')) reply="I offer AI-assisted content writing for articles, scripts, descriptions and other copy.";
+ else if(t.includes('excel')||t.includes('sheet')) reply="I can help with Excel and Google Sheets including formatting, formulas, data cleanup and organization.";
+ else if(t.includes('website')) reply="I offer simple responsive website development and landing pages.";
+ else if(t.includes('price')||t.includes('cost')) reply="Prices depend on the project. Please message me on Fiverr with your requirements for a quote.";
+ else if(t.includes('order')||t.includes('fiverr')) reply="You can place an order or message me through my Fiverr profile. Click the 'Order on Fiverr' button above.";
+ else reply="I can help with video editing, thumbnails, AI content writing, Excel/Google Sheets and website development. Which one interests you?";
+ setTimeout(()=>{box.innerHTML += `<div class="msg bot">${reply}</div>`;box.scrollTop=box.scrollHeight},400);
+ box.scrollTop=box.scrollHeight;
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+</script>
+</body>
+</html>
