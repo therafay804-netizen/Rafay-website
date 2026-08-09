@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,31 +24,34 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:#f7faf9;color:#101828;line-height:1.6}
+body{font-family:'Inter',Arial,Helvetica,sans-serif;background:#f7faf9;color:#1a2430;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.logo,.btn,.navlinks a,.nav-search input,.details-btn{font-family:'Poppins',sans-serif}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #20d98b;outline-offset:2px}
 a{text-decoration:none;color:inherit}
-nav{position:sticky;top:0;z-index:50;background:rgba(7,17,24,.94);backdrop-filter:blur(10px);color:white;padding:16px 7%;display:flex;align-items:center;justify-content:space-between}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,17,24,.94);backdrop-filter:blur(10px);color:white;padding:16px 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}
 .logo{font-size:25px;font-weight:800;color:#24d88b}.logo span{color:white}
 .navlinks{display:flex;gap:24px;font-size:14px}
 .navlinks a:hover{color:#24d88b}
-.btn{display:inline-block;background:#20c879;color:#071118;padding:13px 22px;border-radius:10px;font-weight:800;border:0;cursor:pointer}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.btn{display:inline-block;background:#20c879;color:#071118;padding:13px 24px;border-radius:10px;font-weight:700;font-size:14.5px;letter-spacing:.2px;border:0;cursor:pointer;box-shadow:0 8px 20px #20c87933;transition:.25s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 12px 26px #20c87944}
 .hero{background:linear-gradient(135deg,#061118,#0c2022);color:white;padding:90px 7%;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
-.badge{display:inline-block;border:1px solid #20c879;color:#20c879;border-radius:30px;padding:7px 14px;font-size:13px;font-weight:700;margin-bottom:20px}
-h1{font-size:clamp(42px,6vw,72px);line-height:1.05;margin-bottom:20px}
+.badge{display:inline-block;border:1px solid #20c879;color:#20c879;border-radius:30px;padding:7px 16px;font-size:12.5px;font-weight:600;letter-spacing:1.5px;margin-bottom:22px}
+.hero-logo{width:58px;height:58px;border-radius:16px;margin-bottom:20px;box-shadow:0 10px 26px #0008;display:block}
+h1{font-size:clamp(42px,6vw,72px);line-height:1.08;margin-bottom:20px;letter-spacing:-1px}
 .green{color:#20d98b}
-.hero p{font-size:18px;color:#cbd5db;max-width:650px;margin-bottom:28px}
+.hero p{font-size:18px;color:#c3d1d6;max-width:620px;margin-bottom:32px;font-weight:400}
 .hero-card{min-height:360px;border:1px solid #1e4a46;border-radius:28px;background:radial-gradient(circle at 50% 30%,#0b7359,#0b2027 60%);display:flex;align-items:center;justify-content:center;box-shadow:0 25px 80px #0007}
 .avatar{width:210px;height:210px;border-radius:50%;background:linear-gradient(145deg,#20d98b,#0b5f4b);display:flex;align-items:center;justify-content:center;font-size:72px;font-weight:900;color:white;border:7px solid #ffffff22}
 section{padding:80px 7%}
-.section-title{text-align:center;margin-bottom:45px}
-.section-title small{color:#12a96b;font-weight:800;letter-spacing:2px}
-.section-title h2{font-size:38px;margin-top:8px}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title small{color:#12a96b;font-weight:700;letter-spacing:2.5px;font-size:12.5px}
+.section-title h2{font-size:36px;margin-top:10px;font-weight:700;letter-spacing:-.5px}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
-.card{background:white;border:1px solid #e3ebe7;border-radius:18px;padding:25px;box-shadow:0 10px 30px #0a2b2010;transition:.25s}
-.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px #0a2b2020}
-.icon{font-size:34px;margin-bottom:15px}
-.card h3{font-size:19px;margin-bottom:8px}
-.card p{font-size:14px;color:#667085;margin-bottom:18px}
+.card{background:white;border:1px solid #e3ebe7;border-radius:18px;padding:28px 24px;box-shadow:0 4px 16px #0a2b2008;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px #0a2b2018;border-color:#c9ede0}
+.icon{font-size:24px;margin-bottom:18px;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:#eafaf4;border-radius:14px}
+.card h3{font-size:18.5px;margin-bottom:8px;font-weight:700;letter-spacing:-.2px}
+.card p{font-size:14px;color:#5b6b76;margin-bottom:18px}
 .card .mini{color:#0c9d63;font-weight:800;font-size:13px}
 .stats{background:#071118;color:white;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;border-radius:22px;margin:0 7%;padding:35px}
 .stat strong{font-size:32px;color:#20d98b;display:block}
@@ -59,9 +63,11 @@ section{padding:80px 7%}
 .checks span{font-weight:700}.checks span:before{content:"✓";color:#10b981;margin-right:8px}
 .cta{text-align:center;background:#0a191f;color:white;border-radius:25px;padding:55px 20px}
 .cta p{color:#b9c6ca;margin:10px auto 25px}
-footer{background:#061118;color:#cbd5db;padding:55px 7% 25px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+footer{background:#061118;color:#9fb0b6;padding:55px 7% 25px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
 footer h3,footer h4{color:white;margin-bottom:15px}
-footer a{display:block;margin:8px 0;font-size:14px}
+footer h4{font-size:14px;letter-spacing:.5px}
+footer a{display:block;margin:8px 0;font-size:14px;transition:.2s}
+footer a:hover{color:#20d98b}
 .copy{grid-column:1/-1;border-top:1px solid #ffffff15;padding-top:20px;font-size:13px;text-align:center}
 .chat-toggle{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;border:0;background:#20d98b;color:#061118;font-size:25px;font-weight:900;box-shadow:0 10px 30px #0004;z-index:100;cursor:pointer}
 .chatbox{position:fixed;right:22px;bottom:95px;width:340px;max-width:calc(100vw - 30px);background:white;border-radius:20px;box-shadow:0 20px 60px #0003;overflow:hidden;display:none;z-index:99}
@@ -100,10 +106,20 @@ footer a{display:block;margin:8px 0;font-size:14px}
 .modal-box ul li{padding:9px 0;border-bottom:1px solid #eef2f0;font-size:14px;color:#344054}
 .modal-box ul li:before{content:"✓";color:#12a96b;font-weight:900;margin-right:10px}
 .modal-cta{display:block;text-align:center;margin-top:22px}
+.nav-search{position:relative;display:flex;align-items:center;margin-right:4px}
+.nav-search input{background:#0f2530;border:1px solid #1e4a46;color:white;padding:10px 14px 10px 36px;border-radius:20px;font-size:13px;width:170px;outline:0;transition:.25s}
+.nav-search input::placeholder{color:#8aa0a5}
+.nav-search input:focus{border-color:#20c879;width:210px}
+.nav-search .search-icon{position:absolute;left:12px;font-size:14px;pointer-events:none;opacity:.8}
+.search-msg{position:fixed;top:78px;right:7%;background:#0a191f;color:#fff;padding:10px 16px;border-radius:10px;font-size:13px;font-weight:700;box-shadow:0 10px 30px #0004;z-index:150;display:none}
+.search-msg.show{display:block}
+@keyframes cardPulse{0%{box-shadow:0 0 0 0 #20d98b99}70%{box-shadow:0 0 0 14px #20d98b00}100%{box-shadow:0 0 0 0 #20d98b00}}
+.card.highlighted{border-color:#20d98b;animation:cardPulse 1.2s ease-out 2}
+@media(max-width:600px){.nav-search input{width:120px}.nav-search input:focus{width:150px}}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 <nav>
@@ -111,11 +127,16 @@ footer a{display:block;margin:8px 0;font-size:14px}
   <div class="navlinks">
     <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
   </div>
-  <a class="btn" href="https://www.fiverr.com/" target="_blank">Order on Fiverr ↗</a>
+  <div class="nav-search">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="serviceSearch" placeholder="Search services..." onkeydown="if(event.key==='Enter')searchServices()">
+  </div>
 </nav>
+<div class="search-msg" id="searchMsg"></div>
 
 <header class="hero" id="home">
   <div>
+    <img src="https://i.postimg.cc/XJFWfyG2/logo.png" alt="Rafay Digital Services" class="hero-logo">
     <div class="badge">WELCOME TO MY DIGITAL SERVICES</div>
     <h1 class="main-title">
   Rafay <span>Digital Services</span>
@@ -129,11 +150,11 @@ footer a{display:block;margin:8px 0;font-size:14px}
 <section id="services">
   <div class="section-title"><small>MY SERVICES</small><h2>What I Can Do For You</h2></div>
   <div class="grid">
-    <div class="card"><div class="icon">🎬</div><h3>YouTube Shorts Editing</h3><p>Engaging short-form edits with captions, cuts, effects and clean pacing.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('youtube')">View Details</button></div>
-    <div class="card"><div class="icon">🖼️</div><h3>Thumbnail Design</h3><p>Modern thumbnails designed to make your videos look professional and clickable.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('thumbnail')">View Details</button></div>
-    <div class="card"><div class="icon">✍️</div><h3>AI Content Writing</h3><p>Readable, well-structured AI-assisted articles, scripts, descriptions and copy.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('writing')">View Details</button></div>
-    <div class="card"><div class="icon">📊</div><h3>Excel & Google Sheets</h3><p>Data organization, formatting, formulas, cleanup and simple dashboards.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('excel')">View Details</button></div>
-    <div class="card"><div class="icon">💻</div><h3>Website Development</h3><p>Clean, responsive landing pages and simple websites for online projects.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('website')">View Details</button></div>
+    <div class="card" data-service="youtube"><div class="icon">🎬</div><h3>YouTube Shorts Editing</h3><p>Engaging short-form edits with captions, cuts, effects and clean pacing.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('youtube')">View Details</button></div>
+    <div class="card" data-service="thumbnail"><div class="icon">🖼️</div><h3>Thumbnail Design</h3><p>Modern thumbnails designed to make your videos look professional and clickable.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('thumbnail')">View Details</button></div>
+    <div class="card" data-service="writing"><div class="icon">✍️</div><h3>AI Content Writing</h3><p>Readable, well-structured AI-assisted articles, scripts, descriptions and copy.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('writing')">View Details</button></div>
+    <div class="card" data-service="excel"><div class="icon">📊</div><h3>Excel & Google Sheets</h3><p>Data organization, formatting, formulas, cleanup and simple dashboards.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('excel')">View Details</button></div>
+    <div class="card" data-service="website"><div class="icon">💻</div><h3>Website Development</h3><p>Clean, responsive landing pages and simple websites for online projects.</p><a class="mini" href="https://www.fiverr.com/" target="_blank">View on Fiverr →</a><button class="details-btn" onclick="openServiceModal('website')">View Details</button></div>
   </div>
 </section>
 
@@ -312,6 +333,50 @@ function closeServiceModal(){
 document.getElementById('serviceModal').addEventListener('click', function(e){
   if(e.target === this) closeServiceModal();
 });
+
+const searchKeywords = {
+  youtube: ["youtube","shorts","short form","video editing","video","reels","tiktok","editing","clips"],
+  thumbnail: ["thumbnail","thumbnails","thumbnail design","design","cover","clickbait"],
+  writing: ["content writing","writing","ai content","ai writing","articles","copywriting","copy","blog","script"],
+  excel: ["excel","google sheets","sheets","spreadsheet","data entry","dashboard"],
+  website: ["website","web development","web dev","website development","landing page","site","webpage"]
+};
+
+function searchServices(){
+  const query = document.getElementById('serviceSearch').value.trim().toLowerCase();
+  const msg = document.getElementById('searchMsg');
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('highlighted'));
+  if(!query){ return; }
+
+  let matchKey = null;
+  for(const key in searchKeywords){
+    const keywords = searchKeywords[key];
+    if(keywords.some(k => query.includes(k) || k.includes(query))){
+      matchKey = key;
+      break;
+    }
+  }
+
+  if(matchKey){
+    const card = document.querySelector('.card[data-service="' + matchKey + '"]');
+    if(card){
+      card.scrollIntoView({behavior:'smooth', block:'center'});
+      card.classList.add('highlighted');
+      msg.classList.remove('show');
+    }
+  } else {
+    msg.textContent = "No matching service found. Try: video, thumbnail, writing, excel, website";
+    msg.classList.add('show');
+    setTimeout(() => msg.classList.remove('show'), 3000);
+  }
+}
+
+document.getElementById('serviceSearch').addEventListener('input', function(){
+  if(this.value.trim() === ''){
+    document.querySelectorAll('.card').forEach(c => c.classList.remove('highlighted'));
+    document.getElementById('searchMsg').classList.remove('show');
+  }
+});
 </script>
 <script>
 function getBotResponse(userMessage) {
@@ -451,4 +516,3 @@ function getBotResponse(userMessage) {
 </script>
 </body>
 </html>
-
