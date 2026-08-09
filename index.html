@@ -166,7 +166,7 @@ function sendMsg(){
  const input=document.getElementById('chatinput'), text=input.value.trim(); if(!text)return;
  const box=document.getElementById('messages');
  box.innerHTML += `<div class="msg user">${escapeHtml(text)}</div>`;
- input.value="; 
+ input.value='';
    let reply = getBotResponse(text);
  setTimeout(()=>{box.innerHTML += `<div class="msg bot">${reply}</div>`;box.scrollTop=box.scrollHeight},400);
  box.scrollTop=box.scrollHeight;
