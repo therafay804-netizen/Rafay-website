@@ -77,6 +77,164 @@ footer a{display:block;margin:8px 0;font-size:14px}
 .main-title span {
   font-weight: 700;
 }
+/* PROFESSIONAL SERVICES SECTION */
+
+.partner-services {
+  padding: 90px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin: 0 0 15px;
+}
+
+.section-header p {
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.partner-card {
+  padding: 28px;
+  border: 1px solid rgba(128,128,128,0.25);
+  border-radius: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.service-icon {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+}
+
+.partner-card h3 {
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+}
+
+.partner-card p {
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.service-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.partner-btn,
+.back-btn {
+  display: inline-block;
+  padding: 11px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.partner-btn:hover,
+.back-btn:hover {
+  transform: translateY(-2px);
+}
+
+.view-btn {
+  border: 1px solid rgba(128,128,128,0.45);
+}
+
+.order-btn {
+  color: white;
+  background: #1dbf73;
+}
+
+/* SERVICE DETAILS */
+
+.service-detail {
+  padding: 35px 20px;
+  max-width: 850px;
+  margin: auto;
+}
+
+.detail-card {
+  padding: 35px;
+  border: 1px solid rgba(128,128,128,0.25);
+  border-radius: 20px;
+}
+
+.detail-number {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+.detail-card h2 {
+  margin: 10px 0 15px;
+}
+
+.detail-card p {
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+.detail-card ul {
+  padding-left: 20px;
+  line-height: 2;
+}
+
+.back-btn {
+  margin-top: 15px;
+  border: 1px solid rgba(128,128,128,0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+  .partner-services {
+    padding: 65px 16px;
+  }
+
+  .detail-card {
+    padding: 25px 20px;
+  }
+
+  .service-buttons {
+    flex-direction: column;
+  }
+
+  .partner-btn {
+    text-align: center;
+  }
+}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -309,5 +467,153 @@ function getBotResponse(userMessage) {
     return "I am the virtual assistant of Rafay Digital Services. I can answer questions about our owner, services, prices, YouTube Shorts editing, thumbnails, content writing, Excel, Google Sheets and website services.";
 }
 </script>
+<section id="partner-services" class="partner-services">
+  <div class="section-header">
+    <span class="section-tag">OUR SERVICES</span>
+    <h2>Professional Digital Services</h2>
+    <p>Explore our selected services and find the right solution for your project.</p>
+  </div>
+
+  <div class="partner-grid">
+
+    <!-- VIDEO EDITING -->
+    <div class="partner-card">
+      <div class="service-icon">🎬</div>
+      <h3>YouTube Shorts Editing</h3>
+      <p>Engaging short-form video editing with captions, smooth cuts and professional pacing.</p>
+
+      <div class="service-buttons">
+        <a href="#video-details" class="partner-btn view-btn">View Service</a>
+        <a href="PASTE_VIDEO_EDITING_FIVERR_LINK_HERE" target="_blank" class="partner-btn order-btn">Order on Fiverr →</a>
+      </div>
+    </div>
+
+    <!-- THUMBNAIL -->
+    <div class="partner-card">
+      <div class="service-icon">🖼️</div>
+      <h3>Thumbnail Design</h3>
+      <p>Professional and eye-catching thumbnails designed to make your content stand out.</p>
+
+      <div class="service-buttons">
+        <a href="#thumbnail-details" class="partner-btn view-btn">View Service</a>
+        <a href="PASTE_THUMBNAIL_FIVERR_LINK_HERE" target="_blank" class="partner-btn order-btn">Order on Fiverr →</a>
+      </div>
+    </div>
+
+    <!-- CONTENT WRITING -->
+    <div class="partner-card">
+      <div class="service-icon">✍️</div>
+      <h3>AI Content Writing</h3>
+      <p>Clear and useful AI-assisted content for articles, descriptions, scripts and more.</p>
+
+      <div class="service-buttons">
+        <a href="#writing-details" class="partner-btn view-btn">View Service</a>
+        <a href="PASTE_CONTENT_WRITING_FIVERR_LINK_HERE" target="_blank" class="partner-btn order-btn">Order on Fiverr →</a>
+      </div>
+    </div>
+
+    <!-- EXCEL -->
+    <div class="partner-card">
+      <div class="service-icon">📊</div>
+      <h3>Excel & Google Sheets</h3>
+      <p>Organized spreadsheets, formulas, formatting and data management assistance.</p>
+
+      <div class="service-buttons">
+        <a href="#excel-details" class="partner-btn view-btn">View Service</a>
+        <a href="PASTE_EXCEL_FIVERR_LINK_HERE" target="_blank" class="partner-btn order-btn">Order on Fiverr →</a>
+      </div>
+    </div>
+
+    <!-- WEBSITE -->
+    <div class="partner-card">
+      <div class="service-icon">🌐</div>
+      <h3>Website Development</h3>
+      <p>Modern, responsive websites and landing pages for personal and business needs.</p>
+
+      <div class="service-buttons">
+        <a href="#website-details" class="partner-btn view-btn">View Service</a>
+        <a href="PASTE_WEBSITE_FIVERR_LINK_HERE" target="_blank" class="partner-btn order-btn">Order on Fiverr →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICE DETAILS -->
+
+<section id="video-details" class="service-detail">
+  <div class="detail-card">
+    <span class="detail-number">01</span>
+    <h2>🎬 YouTube Shorts Editing</h2>
+    <p>Professional short-form video editing designed for engaging and fast-paced content.</p>
+    <ul>
+      <li>Clean cuts and smooth pacing</li>
+      <li>Captions and text overlays</li>
+      <li>Transitions and effects where appropriate</li>
+      <li>Optimized for short-form content</li>
+    </ul>
+    <a href="#partner-services" class="back-btn">← Back to Services</a>
+  </div>
+</section>
+
+<section id="thumbnail-details" class="service-detail">
+  <div class="detail-card">
+    <span class="detail-number">02</span>
+    <h2>🖼️ Thumbnail Design</h2>
+    <p>Attention-grabbing thumbnails designed around your video topic and audience.</p>
+    <ul>
+      <li>Custom thumbnail concepts</li>
+      <li>Clear text and visual hierarchy</li>
+      <li>Designed for YouTube and online content</li>
+      <li>Based on your topic and requirements</li>
+    </ul>
+    <a href="#partner-services" class="back-btn">← Back to Services</a>
+  </div>
+</section>
+
+<section id="writing-details" class="service-detail">
+  <div class="detail-card">
+    <span class="detail-number">03</span>
+    <h2>✍️ AI Content Writing</h2>
+    <p>AI-assisted content created and tailored according to your requirements.</p>
+    <ul>
+      <li>Articles and blog content</li>
+      <li>Video scripts</li>
+      <li>Product descriptions</li>
+      <li>Social media and other written content</li>
+    </ul>
+    <a href="#partner-services" class="back-btn">← Back to Services</a>
+  </div>
+</section>
+
+<section id="excel-details" class="service-detail">
+  <div class="detail-card">
+    <span class="detail-number">04</span>
+    <h2>📊 Excel & Google Sheets</h2>
+    <p>Spreadsheet support to help organize and manage your information efficiently.</p>
+    <ul>
+      <li>Formatting and cleanup</li>
+      <li>Basic and advanced formulas</li>
+      <li>Data organization</li>
+      <li>Google Sheets assistance</li>
+    </ul>
+    <a href="#partner-services" class="back-btn">← Back to Services</a>
+  </div>
+</section>
+
+<section id="website-details" class="service-detail">
+  <div class="detail-card">
+    <span class="detail-number">05</span>
+    <h2>🌐 Website Development</h2>
+    <p>Modern and responsive websites built according to the project's requirements.</p>
+    <ul>
+      <li>Landing pages</li>
+      <li>Personal portfolio websites</li>
+      <li>Service and business websites</li>
+      <li>Mobile-friendly responsive design</li>
+    </ul>
+    <a href="#partner-services" class="back-btn">← Back to Services</a>
+  </div>
+</section>
 </body>
 </html>
