@@ -166,20 +166,148 @@ function sendMsg(){
  const input=document.getElementById('chatinput'), text=input.value.trim(); if(!text)return;
  const box=document.getElementById('messages');
  box.innerHTML += `<div class="msg user">${escapeHtml(text)}</div>`;
- input.value='';
- let t=text.toLowerCase(), reply;
- if(t.includes('video')||t.includes('short')) reply="I offer YouTube Shorts editing with captions, cuts, effects and clean pacing. You can order through Fiverr.";
- else if(t.includes('thumbnail')) reply="I offer professional YouTube thumbnail design. Tell me your channel/topic and requirements.";
- else if(t.includes('writing')||t.includes('content')||t.includes('ai')) reply="I offer AI-assisted content writing for articles, scripts, descriptions and other copy.";
- else if(t.includes('excel')||t.includes('sheet')) reply="I can help with Excel and Google Sheets including formatting, formulas, data cleanup and organization.";
- else if(t.includes('website')) reply="I offer simple responsive website development and landing pages.";
- else if(t.includes('price')||t.includes('cost')) reply="Prices depend on the project. Please message me on Fiverr with your requirements for a quote.";
- else if(t.includes('order')||t.includes('fiverr')) reply="You can place an order or message me through my Fiverr profile. Click the 'Order on Fiverr' button above.";
- else reply="I can help with video editing, thumbnails, AI content writing, Excel/Google Sheets and website development. Which one interests you?";
+ input.value="; 
+   let reply = getBotResponse(text);
  setTimeout(()=>{box.innerHTML += `<div class="msg bot">${reply}</div>`;box.scrollTop=box.scrollHeight},400);
  box.scrollTop=box.scrollHeight;
 }
 function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+</script>
+<script>
+function getBotResponse(userMessage) {
+    const message = userMessage.toLowerCase().trim();
+
+    // OWNER QUESTIONS
+    if (
+        message.includes("who is the owner") ||
+        message.includes("who is owner") ||
+        message.includes("owner of this website") ||
+        message.includes("website owner") ||
+        message.includes("owner name") ||
+        message.includes("who owns this website")
+    ) {
+        return "The owner of this website, Rafay Digital Services, is Muhammad Rafay S/O Qasim Zeeshan Ali.";
+    }
+
+    // ABOUT RAFAY
+    if (
+        message.includes("who is rafay") ||
+        message.includes("tell me about rafay") ||
+        message.includes("about the owner")
+    ) {
+        return "Muhammad Rafay is the owner of Rafay Digital Services and provides different online freelance services.";
+    }
+
+    // PRICE QUESTIONS
+    if (
+        message.includes("price") ||
+        message.includes("prices") ||
+        message.includes("pricing") ||
+        message.includes("cost") ||
+        message.includes("charges") ||
+        message.includes("how much")
+    ) {
+        return "Our service prices usually start from $5 and can go up to $15, depending on the service and requirements.";
+    }
+
+    // SERVICES
+    if (
+        message.includes("services") ||
+        message.includes("what do you offer") ||
+        message.includes("what services") ||
+        message.includes("what do you do")
+    ) {
+        return "We offer YouTube Shorts editing, thumbnail design, AI content writing, Excel and Google Sheets work, and website-related services.";
+    }
+
+    // YOUTUBE SHORTS EDITING
+    if (
+        message.includes("youtube") ||
+        message.includes("shorts editing") ||
+        message.includes("video editing")
+    ) {
+        return "Yes! Rafay Digital Services offers YouTube Shorts and short-form video editing services.";
+    }
+
+    // THUMBNAILS
+    if (
+        message.includes("thumbnail") ||
+        message.includes("thumbnail design")
+    ) {
+        return "Yes! We offer attractive and professional thumbnail design services.";
+    }
+
+    // AI CONTENT WRITING
+    if (
+        message.includes("content writing") ||
+        message.includes("ai writing") ||
+        message.includes("article")
+    ) {
+        return "We provide AI-assisted content writing services according to your requirements.";
+    }
+
+    // EXCEL / GOOGLE SHEETS
+    if (
+        message.includes("excel") ||
+        message.includes("google sheets") ||
+        message.includes("spreadsheet")
+    ) {
+        return "Yes! We can help with Excel and Google Sheets related tasks and services.";
+    }
+
+    // WEBSITE SERVICES
+    if (
+        message.includes("website") ||
+        message.includes("web development") ||
+        message.includes("website development")
+    ) {
+        return "We also provide website-related services. Please tell us what type of website you need.";
+    }
+
+    // FIVERR
+    if (message.includes("fiverr")) {
+        return "You can contact Rafay Digital Services through the Fiverr profile for orders and further details.";
+    }
+
+    // CONTACT
+    if (
+        message.includes("contact") ||
+        message.includes("how can i contact") ||
+        message.includes("how to contact")
+    ) {
+        return "You can contact us through our Fiverr profile or the contact options available on this website.";
+    }
+
+    // DELIVERY TIME
+    if (
+        message.includes("delivery") ||
+        message.includes("how long") ||
+        message.includes("delivery time")
+    ) {
+        return "Delivery time depends on the selected service and project requirements. Please contact us before ordering for an exact estimate.";
+    }
+
+    // REVISION
+    if (
+        message.includes("revision") ||
+        message.includes("changes") ||
+        message.includes("revise")
+    ) {
+        return "Revision availability depends on the selected service. Please discuss your requirements before placing an order.";
+    }
+
+    // GREETINGS
+    if (
+        message.includes("hello") ||
+        message.includes("hi") ||
+        message.includes("hey")
+    ) {
+        return "Hello! 👋 Welcome to Rafay Digital Services. How can I help you today?";
+    }
+
+    // DEFAULT ANSWER
+    return "I am the virtual assistant of Rafay Digital Services. I can answer questions about our owner, services, prices, YouTube Shorts editing, thumbnails, content writing, Excel, Google Sheets and website services.";
+}
 </script>
 </body>
 </html>
