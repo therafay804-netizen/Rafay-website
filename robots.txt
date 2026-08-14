@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rafay-website.therafay804.workers.dev/sitemap.xml
